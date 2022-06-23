@@ -8,11 +8,39 @@
         <version>2.6.6</version>
         <relativePath/>
     </parent>
-    <groupId>kz.rebel</groupId>
+    <groupId>io.github.mussaops</groupId>
     <artifactId>aitu-passport</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>aitu-passport</name>
     <description>AITU PASSPORT SIGNATURE</description>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Mussa Ryzdbayev</name>
+            <email>mussa.ryzdbayev@gmail.com</email>
+            <organization>MussaOPS</organization>
+            <organizationUrl>https://github.com/mussaops</organizationUrl>
+            <timezone>UTC+06:00</timezone>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <java.version>11</java.version>
@@ -66,6 +94,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
