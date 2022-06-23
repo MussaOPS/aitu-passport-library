@@ -1,4 +1,4 @@
-package kz.rebel.aitu.passport.dto;
+package io.github.mussaops.aitu.passport.dto;
 
 public class SignatureResponse {
     private String signableId;

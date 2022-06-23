@@ -1,4 +1,4 @@
-package kz.rebel.aitu.passport.service;
+package io.github.mussaops.aitu.passport.service;
 
 import okhttp3.Response;
 import org.springframework.stereotype.Service;

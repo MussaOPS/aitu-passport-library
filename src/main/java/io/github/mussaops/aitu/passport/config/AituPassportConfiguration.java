@@ -1,4 +1,4 @@
-package kz.rebel.aitu.passport.config;
+package io.github.mussaops.aitu.passport.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

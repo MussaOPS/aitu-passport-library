@@ -1,7 +1,7 @@
-package kz.rebel.aitu.passport.service;
+package io.github.mussaops.aitu.passport.service;
 
-import kz.rebel.aitu.passport.dto.*;
-import kz.rebel.aitu.passport.config.AituPassportProperties;
+import io.github.mussaops.aitu.passport.dto.*;
+import io.github.mussaops.aitu.passport.config.AituPassportProperties;
 import okhttp3.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
