@@ -9,7 +9,7 @@
     </parent>
     <groupId>io.github.mussaops</groupId>
     <artifactId>aitu-passport</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>aitu-passport</name>
     <description>AITU PASSPORT SIGNATURE</description>
 
@@ -34,7 +34,7 @@
         <connection>scm:git:git://github.com/mussaops/aitu-passport-library.git</connection>
         <developerConnection>scm:git:git@github.com:mussaops/aitu-passport-library.git</developerConnection>
         <url>https://github.com/mussaops/aitu-passport-library</url>
-        <tag>aitu-passport</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
