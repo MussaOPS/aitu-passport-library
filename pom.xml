@@ -28,7 +28,6 @@
         <connection>scm:git:git://github.com/mussaops/aitu-passport-library.git</connection>
         <developerConnection>scm:git:git@github.com:mussaops/aitu-passport-library.git</developerConnection>
         <url>https://github.com/mussaops/aitu-passport-library</url>
-        <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
