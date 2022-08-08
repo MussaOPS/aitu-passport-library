@@ -34,11 +34,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
@@ -49,7 +49,7 @@
         <gpg.passphrase>F48FA670725BFB8EEF7E37C0773B8F88607351D9</gpg.passphrase>
         <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
         <version.maven-source-plugin>3.0.1</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>2.10.4</version.maven-javadoc-plugin>
+        <version.maven-javadoc-plugin>3.2.0</version.maven-javadoc-plugin>
         <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -107,7 +107,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
@@ -118,9 +118,8 @@
                 <executions>
                     <execution>
                         <id>attach-sources</id>
-                        <phase>package</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>jar-no-fork</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -131,8 +130,7 @@
                 <version>${version.maven-javadoc-plugin}</version>
                 <executions>
                     <execution>
-                        <id>attach-javadoc</id>
-                        <phase>package</phase>
+                        <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
                         </goals>
@@ -150,6 +148,10 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <keyname>${gpg.keyname}</keyname>
+                            <passphrase>${gpg.keyname}</passphrase>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
